@@ -5,6 +5,8 @@ export default function App() {
   return (
     <>
       <Header />
+      <section>ola mundo</section>
+      <footer>criado por daniel</footer>
     </>
   );
 }
