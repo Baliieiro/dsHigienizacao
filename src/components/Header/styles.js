@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled from "styled-components";
 
 export const Container = styled.header`
   height: 17vh;
   background-color: var(--background-color);
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   padding: 2rem 4rem;
@@ -56,16 +56,13 @@ export const NavLinks = styled.div`
     display: none;
   }
 `;
-export const ContainerLinks = styled.div`
-  a {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+export const Links = styled(Link)`
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+
   @media screen and (min-width: 768px) {
-    a {
-      display: flex;
-      align-items: center;
-    }
+    display: flex;
+    align-items: center;
   }
 `;

@@ -2,7 +2,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import navList from "../../constants/navList";
 import Sidebar from "../Sidebar";
-import { Container, ContainerImage, ContainerLinks, NavLinks } from "./styles";
+import { Container, ContainerImage, Links, NavLinks } from "./styles";
 
 export default function Header() {
   const [sidebar, setSidebar] = useState(false);
@@ -20,9 +20,9 @@ export default function Header() {
 
       <NavLinks>
         {navList.map((item) => (
-          <ContainerLinks key={item.id}>
-            <a href={item.links}>{item.label}</a>
-          </ContainerLinks>
+          <div key={item.id}>
+            <Links to={item.links}>{item.label}</Links>
+          </div>
         ))}
       </NavLinks>
       <MenuIcon onClick={showSiderbar} />
